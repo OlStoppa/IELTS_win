@@ -27,6 +27,7 @@ const Lessons = () => (
             <div key={ post.node.id}>
             <h3>{post.node.frontmatter.title}</h3>
             <small>By {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+            <Link to={post.node.frontmatter.path}>Read More</Link>
             </div>
         ))}
     </div>

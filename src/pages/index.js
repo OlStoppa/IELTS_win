@@ -16,7 +16,7 @@ const IndexPage = () => (
     <h3>Try our writing practice tests</h3>
     <ul>
       <li>You can submit your test for grading by one of our experienced IELTS tutors.</li>
-      <li><Link>Check out an example of the kind of feedback and correction we offer.</Link></li>
+      <li><Link to="/writing-test">Check out an example of the kind of feedback and correction we offer.</Link></li>
 
     </ul>
     
