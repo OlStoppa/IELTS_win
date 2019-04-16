@@ -1,5 +1,8 @@
+@import '../styles/settings';
+@import '../styles/components/menu';
+
 html {
-  font-family: sans-serif;
+  font-family: Tahoma;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +10,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  
 }
 article,
 aside,
@@ -200,7 +205,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Tahoma, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -208,6 +213,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background-color: $mid-grey;
 }
 img {
   max-width: 100%;

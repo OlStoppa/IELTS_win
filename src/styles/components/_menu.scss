@@ -1,0 +1,56 @@
+
+.menu {
+  height: 50px;
+  background-color: white;
+  box-shadow: 2px  2px 2px 1px rgb(92, 91, 91);
+  outline: solid black 2px;
+  z-index: 2;
+  position: relative;
+
+    align-items: center;
+  ul {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    li {
+        margin: 0;
+    }
+    li:hover {
+        color: $bright-pink;
+       
+    }
+    
+  }
+}
+
+.main--container {
+    z-index: 1;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    background-color: white;
+   
+}
+
+main {
+    padding: 50px 10px 0 10px;
+    float: left;
+    width: 70%;
+    background-color: #FFF; 
+ }
+
+.asideImg {
+    width: 100%;
+
+}
+
+.recentLessons--container {
+  background-color: $mid-grey;
+}
+
