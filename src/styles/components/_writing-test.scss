@@ -1,0 +1,46 @@
+.writing-page--body {
+  width: 100vw;
+  flex: 1;
+  background-color: #dce4ec;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.test-container {
+    // border: gray solid 2px;
+    align-content: center;
+    border-radius: 4px;
+    padding: 5px;
+    width: 1200px;
+    background-color: #bdddff;
+}
+.test-question {
+//   width: 70%;
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  border: #8eb6d8 solid 2px;
+  margin-bottom: 10px; 
+}
+
+.text-area__writing-test {
+    width: 100%;
+    border-radius: 4px;
+    // border: #8eb6d8 solid 2px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.75);
+    min-height: 250px;
+
+    
+}
+textarea:focus {
+  outline: none;
+}
+
+.answer-container {
+  padding: 4px 40px 40px;
+  background-color: #a7c8e7;
+  border-radius: 4px;
+
+}

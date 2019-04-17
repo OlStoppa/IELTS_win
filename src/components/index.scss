@@ -1,5 +1,6 @@
 @import '../styles/settings';
 @import '../styles/components/menu';
+@import '../styles/components/writing-test';
 
 html {
   font-family: Tahoma;
@@ -214,7 +215,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: $mid-grey;
+  background-color: #dce4ec;
 }
 img {
   max-width: 100%;
