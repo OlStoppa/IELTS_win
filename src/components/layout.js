@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import gradeMy from '../images/IELTSspeaking-project.png'
 
 import Header from "./header"
-import Menu from "./Menu"
+
 import Lessons from "../components/lessons"
 import "./index.scss"
 
@@ -29,24 +29,24 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Menu />
+      
         <div
           style={{
             margin: `0 auto`,
             maxWidth: 1200,
             // padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
-            // backgroundColor: `#F4F7F6`,
+            backgroundColor: `white`,
             
           }}
         >
-        <div className="main--conatiner">
+        <div className="main--container">
           <main>{children}
           
           </main>
           <aside>
-            <div style={{paddingTop: 10}}>
-              <h4>Try the "Grade My IELTS Speaking" app</h4>
+            <div style={{paddingTop: 50}}>
+              
             <img className="asideImg" src={gradeMy}/>
             
             </div>

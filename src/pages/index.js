@@ -8,6 +8,16 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <Link to="/writing-test">
+    <div className="writing-link--outer">
+    <div className="writing-link">
+    
+      
+    </div>
+    </div>
+    </Link>
+    <hr/>
+    <hr/>
     <h2>Welcome to IELTS WIN.</h2>
     <p>The IELTS is hard. Especially if you need to get a high band score. An experienced IELTS tutor can be a great help but can also be very expensive. Our mission at IELTSWIN.com is to give you access to great free content to help you practice and improve.</p>
     <p>We have compiled a lot of practice tests to check your progress. This is easy to do for the listening and reading sections, as you can check your own answers. Test takers often find it very difficult to evaluate their performance in the speaking and writing sections.</p>
