@@ -41,7 +41,7 @@ return (
         margin: `0 auto`,
         maxWidth: 1200,
         padding: `1.45rem 1.0875rem`,
-        backgroundColor: `#0d2b4c`,
+        // backgroundColor: `#0d2b4c`,
         alignItems: "center",
         height: "100%"
       }}
@@ -54,7 +54,7 @@ return (
             textDecoration: `none`,
           }}
         >
-          IELTS WIN
+          {this.props.siteTitle}
         </Link>
       </h1>
     </div>
@@ -64,12 +64,12 @@ return (
         }
         }
 
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
 
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
+Header.defaultProps = {
+  siteTitle: ``,
+}
 
 export default Header

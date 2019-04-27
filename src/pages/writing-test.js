@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 import Menu from "../components/Menu"
+import Footer from '../components/footer'
 
 
 const generalQuestions = [
@@ -42,7 +43,9 @@ class WritingTest extends React.Component {
     super(props);
     this.state = {
       question: 0,
-      academic: false
+      academic: false,
+      uploadedName: '',
+      showQuestion: true
     };  
     
     
@@ -59,6 +62,16 @@ class WritingTest extends React.Component {
     this.setState((state) => {
      return { question: state.question === currentQuestionSet.length - 1 ? 0 : state.question + 1 }
             })
+  }
+
+  handlePickFiles = (e) => {
+    let file = e.target.files;
+    let reader = new FileReader();
+    this.setState({uploadedName: file[0].name})
+  }
+
+  handleHideQuestion = () => {
+    this.setState((prevState) =>  ({showQuestion: !prevState.showQuestion}));
   }
 
   handleCheckout = (event) => {
@@ -86,21 +99,33 @@ class WritingTest extends React.Component {
           <div className="test-container">
           <div className="test-nav">
           <button onClick={this.handleQuestionChange}>New Question</button>
+          <button onClick={this.handleHideQuestion}>{this.state.showQuestion ? "Hide Question" : "Show Question"}</button>
           <button onClick={this.handleTestType}>{this.state.academic ? "General Training" : "Academic"}</button>
           </div>
+          {this.state.showQuestion === true &&
             <div className="test-question" >
             {questions[this.state.question]}
             </div>
+          }
             <div className="answer-container">
               <textarea className="text-area__writing-test" />
+              <div className="submit-container">
+              <form>
+                <input type="file" id="file" name="Upload" name="file" className="inputFile" onChange={(e)=> this.handlePickFiles(e)}/>
+                <label for="file">Upload a file</label>
+              </form>
               <form onSubmit={(event) => {this.handleCheckout(event)}}>
                 <button type="submit">Submit your Writing</button>
-
               </form>
+              {this.state.uploadedName &&
+              <div style={{background: "white"}}>{this.state.uploadedName}</div>
+              }
+              </div>
               
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

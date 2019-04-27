@@ -1,7 +1,7 @@
 
 .menu {
   
-  height: 50px;
+  height: 30px;
   background-color: white;
   box-shadow: 2px  2px 2px 1px rgb(92, 91, 91);
   outline: solid black 2px;
@@ -12,7 +12,7 @@
 
     align-items: center;
   ul {
-    height: 50px;
+    height: 30px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -39,8 +39,9 @@
     z-index: 1;
     margin-top: 150px;
     background-color: #fff;
-    position: absolute;
+    // position: absolute;
     max-width: 1200px;
+    display: block;
     
     
 }
@@ -102,16 +103,19 @@ main {
   
 }
 .recent-lesson--container__pic {
-  width: 40%;
-  display: flex;
+  width: 70%;
+  // display: flex;
   align-items: center;
-  flex: 1;
-  padding: 5px;
-  img {
-    margin: 0;
-  }
+//  position: relative;
+
+  
 }
 
 .recent-lesson--container__text {
   
+}
+
+.footer {
+  background-color: #0d2b4c;
+  height: 75px;
 }
