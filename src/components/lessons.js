@@ -50,7 +50,7 @@ const Lessons = () => (
                 <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
               </div>
               <div className="recent-lesson--container__text">
-                <h4>{post.node.frontmatter.title}</h4>
+                <h5>{post.node.frontmatter.title}</h5>
                 <small>
                   By {post.node.frontmatter.author} on{" "}
                   {post.node.frontmatter.date}

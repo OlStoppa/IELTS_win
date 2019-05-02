@@ -218,7 +218,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: #dce4ec;
+  background-color: white;
 }
 img {
   max-width: 100%;
@@ -629,7 +629,7 @@ pre tt:after {
 header {
   height: 100px;
   transition-duration: 500ms;
-  transition-property: height;
+  transition-property: height font-size;
   z-index: 90;
   
   
@@ -644,7 +644,13 @@ header {
 
   
   &.smaller {
-    height: 50px;
+    height: 52px;
+    // h1{
+    // font-size: 0.1em;
+    // padding: 0;
+    // margin: 0;
+    // }
+    
     
   }
   

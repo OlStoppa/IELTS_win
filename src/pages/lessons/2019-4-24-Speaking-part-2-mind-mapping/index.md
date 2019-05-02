@@ -12,6 +12,10 @@ planning a two minute talk in this short amount of time can be very challenging 
           
 Consider the following question card:
 
-![ggg](../images/part2card.png)       
+![ggg](../images/sport_question_card.jpg)       
         
-By mind-mapping we organize our ideas in terms of **what**, **who**, **where**, **when**, **why** and **how**.
+By mind-mapping we organize our ideas in terms of **what**, **who**, **where**, **when**, **why** and **how**. It could look something like this: 
+
+![mind map](../images/mind-map.png)
+
+For each category of the mind map, I write my main ideas, as well as key vocabulary I would like to use. I can then use the mind map to structure my answer. 

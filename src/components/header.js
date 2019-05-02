@@ -18,7 +18,7 @@ class Header extends React.Component {
 
   resizeHeaderOnScroll() {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop;
-    const shrinkOn = 100;
+    const shrinkOn = 1;
     
     if(distanceY > shrinkOn) {
       this.setState({ shrink: true });

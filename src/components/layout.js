@@ -47,7 +47,7 @@ const Layout = ({ children }) => (
           
           </main>
           <aside>
-            <div style={{paddingTop: 50}}>
+            <div style={{}}>
               
             <img className="asideImg" src={gradeMy}/>
             
