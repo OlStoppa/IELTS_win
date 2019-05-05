@@ -133,6 +133,7 @@ class WritingTest extends React.Component {
       uploaded: [],
       showQuestion: true,
       task: "1",
+      answerText: ""
     }
   }
   componentDidMount() {
@@ -184,6 +185,10 @@ class WritingTest extends React.Component {
 
   handleHideQuestion = () => {
     this.setState(prevState => ({ showQuestion: !prevState.showQuestion }))
+  }
+
+  handleChangeAnswerText = (e) => {
+    this.setState({ answerText: e.target.value });
   }
 
   handleCheckout = event => {
@@ -257,7 +262,7 @@ class WritingTest extends React.Component {
               </div>
             )}
             <div className="answer-container">
-              <textarea className="text-area__writing-test" />
+              <textarea className="text-area__writing-test" value={this.state.answerText} onChange={this.handleChangeAnswerText}/>
               <div className="submit-container">
                 <form
                   onSubmit={event => {
