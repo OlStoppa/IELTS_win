@@ -275,6 +275,7 @@ class WritingTest extends React.Component {
             </div>
           </div>
         </div>
+        
         <Footer />
       </div>
     )

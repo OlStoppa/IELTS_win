@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+import LessonLink from '../components/lessonLink'
 
 const Tags = ({ pageContext, data }) => {
     const { tag } = pageContext
@@ -10,6 +12,7 @@ const Tags = ({ pageContext, data }) => {
     } tagged with "${tag}"`
 
     return (
+        <Layout>
         <div>
             <h1>{tagHeader}</h1>
             <ul>
@@ -17,13 +20,14 @@ const Tags = ({ pageContext, data }) => {
                     const {slug} = node.fields
                     const { title, path } = node.frontmatter
                     return (
-                        <li key={slug}>
-                            <Link to={path}>{title}</Link>
-                        </li>
+                        
+                            <Link key={slug} to={path}><LessonLink data={node}/></Link>
+                       
                     )
                 })}
             </ul>
         </div>
+        </Layout>
     )
 }
 
@@ -68,6 +72,19 @@ export const pageQuery = graphql`
                     frontmatter {
                         title
                         path
+                        author
+                        date
+                        image {
+                            childImageSharp {
+                                resize(width: 1500, height: 1500) {
+                                  src
+                                }
+                                fluid(maxWidth: 800) {
+                                  ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                        
                     }
                 }
             }

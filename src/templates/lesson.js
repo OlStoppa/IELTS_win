@@ -12,7 +12,7 @@ export default function Lesson({data}) {
     return (
         <Layout>
         <div>
-            <h1>{lessonData.frontmatter.title}</h1>
+            <h2>{lessonData.frontmatter.title}</h2>
             <Img fluid={lessonData.frontmatter.image.childImageSharp.fluid} />
             <h4>By {lessonData.frontmatter.author} on {lessonData.frontmatter.date}</h4>
             <div dangerouslySetInnerHTML={{ __html: lessonData.html}}/>

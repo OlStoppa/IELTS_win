@@ -676,18 +676,78 @@ header {
   
 }
 
+ul {
+  margin: 0;
+}
 
+hr {
+  margin-top: 10px;
+}
 
+.lesson-link {
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+  width: 100%;
+  
+  
+}
 
+.lesson-link .link-image {
+  
+    transition: transform 500ms ease;
+  
+}
 
-.writing-link--footer{
-  height: 100px;
-  background-color: #000;
+ 
+
+.lesson-link:hover .link-image {
+  transform: scale(1.1);
+}
+
+.lesson-link__footer{
+  height: 150px;
+  background-color: $dark-blue;
   transform: none;
   position: absolute;
   bottom: 0;
- 
+  width: 100%;
+  opacity: 0.8;
+  color: white;
+  padding: 2em;
+ span {
+   color: #aaa;
+   font-weight: 0;
+ }
 
+}
+
+.div--skew {
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  background: #3d5d81;
+  transform: skew(0deg, -10deg) translateY(-120px);
+  
+  
+}
+.tag--container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.tag {
+  background: #37836c;
+  color: white;
+  padding: 5px;
+  border-radius: 5%;
+  
 }
 
 @media only screen and (max-width: 480px) {

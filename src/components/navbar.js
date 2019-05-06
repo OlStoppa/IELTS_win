@@ -5,7 +5,7 @@ const Navbar = () => (
     <div className="navbar">
   <ul>
     <li>
-    <div className='icon-box'><span>Writing</span><span className="material-icons">arrow_drop_down</span></div>
+    <div className='icon-box'><span>WRITING</span><span className="material-icons">arrow_drop_down</span></div>
       <ul>
         <li>
           <Link>Writing Correction</Link>
@@ -22,7 +22,7 @@ const Navbar = () => (
       </ul>
     </li>
     <li>
-    <div className='icon-box'>Reading<span className="material-icons">arrow_drop_down</span></div>
+    <div className='icon-box'>READING<span className="material-icons">arrow_drop_down</span></div>
     <ul>
         <li>
           <Link>Writing Correction</Link>
@@ -39,7 +39,7 @@ const Navbar = () => (
       </ul>
     </li>
     <li>
-    <div className='icon-box'>Listening<span className="material-icons">arrow_drop_down</span></div>
+    <div className='icon-box'>LISTENING<span className="material-icons">arrow_drop_down</span></div>
     <ul>
         <li>
           <Link>Writing Correction</Link>
@@ -56,7 +56,7 @@ const Navbar = () => (
       </ul>
     </li>
     <li>
-    <div className='icon-box'>Speaking<span className="material-icons">arrow_drop_down</span></div>
+    <div className='icon-box'>SPEAKING<span className="material-icons">arrow_drop_down</span></div>
     <ul>
         <li>
           <Link>Writing Correction</Link>
