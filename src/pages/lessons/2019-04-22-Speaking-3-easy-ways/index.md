@@ -4,6 +4,7 @@ date: "2019-04-22"
 title: "3 Easy Ways to Boost Your Speaking Band Score"
 author: "Oliver"
 category: "speaking"
+tags: ["speaking", "tips", "grammar"] 
 image: 3easyways.png
 ---
 

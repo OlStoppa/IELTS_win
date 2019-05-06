@@ -4,6 +4,7 @@ date: "2019-04-24"
 title: "Planning Your IELTS Speaking Part 2 Answer"
 author: "Oliver"
 category: "speaking"
+tags: ["speaking", "part-2", "strategy"]
 image: mindmapping.jpg
 ---
 

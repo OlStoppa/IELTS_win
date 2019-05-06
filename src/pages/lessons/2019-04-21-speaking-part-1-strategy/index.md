@@ -4,6 +4,7 @@ date: "2019-04-21"
 title: "A Cool Strategy For IELTS Speaking Part 1"
 author: "Oliver"
 category: "speaking"
+tags: ["speaking", "part-1", "strategy"]
 image: part1strategy.jpg
 ---
 

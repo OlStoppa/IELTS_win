@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
+import Tags from '../components/tags';
 
 
 export default function Lesson({data}) {
@@ -15,7 +16,9 @@ export default function Lesson({data}) {
             <Img fluid={lessonData.frontmatter.image.childImageSharp.fluid} />
             <h4>By {lessonData.frontmatter.author} on {lessonData.frontmatter.date}</h4>
             <div dangerouslySetInnerHTML={{ __html: lessonData.html}}/>
-           
+            <Tags 
+                tags={lessonData.frontmatter.tags}
+            />
         </div>
         </Layout>
     );
@@ -30,6 +33,7 @@ query LessonByPath($path: String!) {
             author
             title
             date
+            tags
             image {
                 childImageSharp {
                     resize(width: 1500, height: 1500) {
