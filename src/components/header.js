@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Menu from "../components/Menu"
 import Navbar from "../components/navbar"
 import SocialLinks from "../components/social"
 

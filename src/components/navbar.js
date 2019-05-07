@@ -7,9 +7,11 @@ const Navbar = () => (
     <li>
     <div className='icon-box'><span>WRITING</span><span className="material-icons">arrow_drop_down</span></div>
       <ul>
+        <Link>
         <li>
-          <Link>Writing Correction</Link>
+          Writing Correction
         </li>
+        </Link>
         <li>
           <Link>Task 1</Link>
         </li>

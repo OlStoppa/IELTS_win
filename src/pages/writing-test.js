@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "../components/header"
-import Menu from "../components/Menu"
+
 import Footer from "../components/footer"
 import writingQuestionImg1 from "../images/IELTS_Writing_Task_1_2.png"
 import writingQuestionImg2 from "../images/IELTS_Writing_Task_1_1.png"
@@ -215,7 +215,7 @@ class WritingTest extends React.Component {
     return (
       <div>
         <Header siteTitle="IELTS WIN" />
-        <Menu />
+       
         <div className="writing-page--body">
           <div className="test-container">
             <div className="test-nav">
@@ -273,10 +273,13 @@ class WritingTest extends React.Component {
                 </form>
               </div>
             </div>
+            
           </div>
+          
         </div>
         
         <Footer />
+        
       </div>
     )
   }

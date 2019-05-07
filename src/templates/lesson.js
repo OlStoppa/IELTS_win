@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import Tags from '../components/tags';
+import ShareBlock from '../components/share-block'
 
 
 export default function Lesson({data}) {
@@ -19,6 +20,9 @@ export default function Lesson({data}) {
             <Tags 
                 tags={lessonData.frontmatter.tags}
             />
+            <ShareBlock 
+                url={`www.ieltswin.com/${lessonData.frontmatter.path}`}
+                />
         </div>
         </Layout>
     );
