@@ -7,14 +7,13 @@ import LessonLink from '../components/lessonLink'
 const Tags = ({ pageContext, data }) => {
     const { tag } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
-    const tagHeader = `${totalCount} post${
-        totalCount === 1 ? "" : "s"
-    } tagged with "${tag}"`
+    const bigTag = tag.toUpperCase();
+   
 
     return (
         <Layout>
         <div>
-            <h1>{tagHeader}</h1>
+            <h2>{bigTag}</h2>
             <ul>
                 {edges.map(({node}) => {
                     const {slug} = node.fields

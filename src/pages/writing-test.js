@@ -164,8 +164,11 @@ class WritingTest extends React.Component {
 
   handlePickFiles = e => {
     let file = e.target.files
+
+    if(file.length > 0) {
     let reader = new FileReader()
     reader.readAsDataURL(file[0])
+    
     return new Promise((resolve, reject) => {
       reader.onerror = () => {
         reader.abort();
@@ -180,6 +183,15 @@ class WritingTest extends React.Component {
           ],
         }))
       }
+    })
+    } else {
+      e.target.reset();
+    }
+  }
+
+  handleRemoveFile = (key) => {
+    this.setState({
+      uploaded: this.state.uploaded.filter(el => el.fileName !== key)
     })
   }
 
@@ -217,6 +229,7 @@ class WritingTest extends React.Component {
         <Header siteTitle="IELTS WIN" />
        
         <div className="writing-page--body">
+        <div className="div--skew__writing-test"></div>
           <div className="test-container">
             <div className="test-nav">
               <select value={this.state.type} onChange={this.handleTestType}>
@@ -233,6 +246,7 @@ class WritingTest extends React.Component {
               </button>
               <form className="inputForm">
                 <input
+                  disabled={this.state.uploaded.length > 1}
                   type="file"
                   id="file"
                   name="Upload"
@@ -241,16 +255,16 @@ class WritingTest extends React.Component {
                   accept=".doc,.docx,.pdf,.jpg,.png"
                   onChange={e => this.handlePickFiles(e)}
                 />
-                <label for="file">Upload a file</label>
+                <label for="file">Upload File</label>
               </form>
             </div>
             {this.state.uploaded.length > 0 && (
               <div className="test-question">
                 {this.state.uploaded.map(name => {
                   return (
-                    <div>
-                      {name.fileName}
-                      <span className="material-icons">clear</span>
+                    <div key={name.fileName} className="uploaded-file">
+                      <span >{name.fileName}</span>
+                      <span  onClick={() => {this.handleRemoveFile(name.fileName)}} className="material-icons clear-icon">clear</span>
                     </div>
                   )
                 })}

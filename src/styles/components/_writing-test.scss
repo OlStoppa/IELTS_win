@@ -1,7 +1,7 @@
 .writing-page--body {
   
   width: 100vw;
-  
+  position: relative;
   background-color: $light-grey;
   display: flex;
   align-items: center;
@@ -9,9 +9,16 @@
   padding: 150px 100px;
   margin:  0 auto 0;
   min-height: 90vh;
+  z-index: 0;
+}
 
-  
-  
+.div--skew__writing-test {
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  background: #3d5d81;
+  transform: skew(0deg, -10deg) translateY(-320px);
+  z-index: -1;
 }
 
 
@@ -23,6 +30,7 @@
     padding: 5px;
     width: 1100px;
     background-color: #bdddff;
+    
 }
 .test-question {
 //   width: 70%;
@@ -77,32 +85,50 @@ textarea:focus {
 }
 
 .inputFile + label {
-  color: #494949 !important;
-text-transform: uppercase;
-background: #ffffff;
-padding: 10px;
-border: 2px solid #494949 !important;
-border-radius: 6px;
-display: inline-block;
-
+  display: inline-block;
+  background:    #3d85c6;
+  background:    linear-gradient(#3d85c6, #073763);
+  border-radius: 0px;
+  padding:       8px 20px;
+  color:         #ffffff;
+  
+  
+  text-align:    center;
+  text-shadow:   1px 1px #000000;
+  border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+  
 }
+
+
 .inputForm {
   margin: 0;
-}
-
-.social-icons {
-  
-  display: flex;
-  flex-direction: row;
+  font-size: 1em;
   
 }
 
-.social-icon {
-  display: inline-block;
-  color: gray;
+.uploaded-file {
+  background: #d7d7d7;
+  border-radius: 10px/10px;
+  display: inline-flex;
+  padding: 3px;
+  font-size: 0.8em;
   margin-right: 5px;
-
-  &:hover {
-    color: white;
-  }
+  align-items: center;
 }
+
+.clear-icon {
+  height: 1em;
+  width: 1em;
+  border-radius: 50px/50px;
+  background-color: #eee;
+  margin-left: 5px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+
+

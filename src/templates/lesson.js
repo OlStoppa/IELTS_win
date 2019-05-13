@@ -13,9 +13,16 @@ export default function Lesson({data}) {
     return (
         <Layout>
         <div>
-            <h2>{lessonData.frontmatter.title}</h2>
+            
+            <div className="lesson-link">
             <Img fluid={lessonData.frontmatter.image.childImageSharp.fluid} />
-            <h4>By {lessonData.frontmatter.author} on {lessonData.frontmatter.date}</h4>
+            <div className="lesson-link__footer">
+            <h2>{lessonData.frontmatter.title}</h2>
+            <span>By {lessonData.frontmatter.author}</span>
+            <span> on {lessonData.frontmatter.date}</span>
+            </div>
+            </div>
+            
             <div dangerouslySetInnerHTML={{ __html: lessonData.html}}/>
             <Tags 
                 tags={lessonData.frontmatter.tags}

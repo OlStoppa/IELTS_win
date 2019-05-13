@@ -1,35 +1,60 @@
-button {
+// button {
     
         
-      //   height: 40px;
-      //   background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
-      //   border: none;
-      //   border-radius: 5px;
-      //   position: relative;
-      //   border-bottom: 4px solid #2b8bc6;
-      //   color: #fbfbfb;
-      //   font-weight: 600;
-      //   font-family: 'Open Sans', sans-serif;
-      //   text-shadow: 1px 1px 1px rgba(0,0,0,.4);
-      //   font-size: 15px;
-      //   text-align: left;
-      //   text-indent: 5px;
-      //   box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
-      //   cursor: pointer;
+//       //   height: 40px;
+//       //   background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+//       //   border: none;
+//       //   border-radius: 5px;
+//       //   position: relative;
+//       //   border-bottom: 4px solid #2b8bc6;
+//       //   color: #fbfbfb;
+//       //   font-weight: 600;
+//       //   font-family: 'Open Sans', sans-serif;
+//       //   text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+//       //   font-size: 15px;
+//       //   text-align: left;
+//       //   text-indent: 5px;
+//       //   box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+//       //   cursor: pointer;
       
-      // /* Just for presentation */  
-      //   display: block;
-      //   margin: 0 auto;
-      //   margin-bottom: 20px;
-      color: #494949 !important;
-text-transform: uppercase;
-background: #ffffff;
-padding: 5px;
-border: 2px solid #494949 !important;
-border-radius: 6px;
-display: inline-block;
+//       // /* Just for presentation */  
+//       //   display: block;
+//       //   margin: 0 auto;
+//       //   margin-bottom: 20px;
+//       color: #494949 !important;
+// text-transform: uppercase;
+// background: #ffffff;
+// padding: 5px;
+// // border: 2px solid #494949 !important;
+// // border-radius: 6px;
+// display: inline-block;
       
+// }
+// button:focus{
+//     outline: none;
+// }
+
+
+button {
+  background:    #3d85c6;
+background:    linear-gradient(#3d85c6, #073763);
+border-radius: 0px;
+padding:       8px 20px;
+color:         #ffffff;
+display:       inline-block;
+font-family:    'sans-serif';
+text-align:    center;
+text-shadow:   1px 1px #000000;
 }
-button:focus{
-    outline: none;
+  
+.button {
+  background:    #3d85c6;
+  background:    linear-gradient(#3d85c6, #073763);
+  border-radius: 0px;
+  padding:       8px 20px;
+  color:         #ffffff;
+  display:       inline-block;
+  font-family:    'sans-serif';
+  text-align:    center;
+  text-shadow:   1px 1px #000000;
 }

@@ -1,8 +1,10 @@
 @import '../styles/settings';
-@import '../styles/components/menu';
 @import '../styles/components/writing-test';
 @import '../styles/components/button';
 @import '../styles/components/navbar';
+@import '../styles/components/recent-lessons';
+@import '../styles/components/header';
+@import '../styles/components/writing-corrections';
 
 html {
   font-family: Tahoma;
@@ -219,7 +221,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: white;
+  background-color: $light-grey;
 }
 img {
   max-width: 100%;
@@ -627,35 +629,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-header {
-  height: 120px;
-  transition-duration: 500ms;
-  transition-property: height font-size;
-  z-index: 90;
-  
-  
-}
-.js-header {
-  // display: block;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  
 
-  
-  &.smaller {
-    height: 52px;
-    // h1{
-    // font-size: 0.1em;
-    // padding: 0;
-    // margin: 0;
-    // }
-    
-    
-  }
-  
-}
 .writing-link--outer {
   height: 400px;
   width: 100%;
@@ -721,6 +695,24 @@ hr {
  }
 
 }
+header {
+  height: 120px;
+  transition-duration: 500ms;
+  transition-property: height font-size;
+  z-index: 90;
+}
+.js-header {
+  // display: block;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &.smaller {
+    height: 52px;
+  }
+}
+
 
 .div--skew {
   position: absolute;
@@ -728,7 +720,7 @@ hr {
   width: 100%;
   background: #3d5d81;
   transform: skew(0deg, -10deg) translateY(-120px);
-  
+  z-index: -1;
   
 }
 .tag--container {
@@ -752,9 +744,48 @@ hr {
 
 .share-block {
   display: flex;
-  width: 50%;
+  width: 70%;
   justify-content: space-evenly;
 }
+
+.footer {
+  background-color: #0d2b4c;
+  height: 100px;
+  position: absolute;
+  width: 100%; 
+}
+
+
+.main--container {
+  z-index: 1;
+  margin-top: 110px;
+  background-color: #fff;
+  max-width: 1200px;
+  display: block;
+}
+
+aside {
+  float: right;
+  width: 30%;
+  background-color: #fff;
+  padding: 50px 10px;
+  height: 100%;
+ 
+}
+
+main {
+  padding: 50px 10px 0 10px;
+  float: left;
+  width: 70%;
+  background-color: #FFF; 
+}
+
+.asideImg {
+  width: 100%;
+
+}
+
+
 
 @media only screen and (max-width: 480px) {
   html {

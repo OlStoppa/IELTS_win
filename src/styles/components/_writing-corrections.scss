@@ -1,0 +1,49 @@
+
+.oliver-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: grey solid 2px;
+    border-radius: 2%;
+
+    
+
+}
+
+.oliver-img {
+    padding: 20px;
+    object-fit: cover;
+    width: 400px;
+    
+    
+}
+
+.oliver-text {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.heading-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pdf-preview {
+    height: 400px;
+}
+
+.preview-container {
+    display: flex;
+}
+
+.preview-description {
+    flex: 1;
+    padding: 10px;
+    ul {
+    list-style: none;
+    }
+}
+
+.pdf-preview--container {
+    padding: 20px;
+}
