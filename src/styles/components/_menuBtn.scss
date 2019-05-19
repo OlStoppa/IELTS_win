@@ -1,0 +1,35 @@
+.menu-btn {
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+    margin-right: 1rem;
+    position: relative;
+    
+    @media (max-width: $breakpoint) {
+        display: block;
+    }
+
+    &.close {
+        
+        .btn-line {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+    
+}
+
+.btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: transform  500ms;
+}

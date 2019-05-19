@@ -43,6 +43,7 @@ exports.createPages = ({actions, graphql}) => {
                       author
                       date
                       tags
+                      answers
                     }
                   }
                 }

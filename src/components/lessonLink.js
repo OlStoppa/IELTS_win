@@ -11,8 +11,9 @@ const LessonLink = (props) => {
         <div className="lesson-link">
             <Img className="link-image" fluid={image.childImageSharp.fluid} />
             <div className="lesson-link__footer">
+                
+                <div className="lesson-link__footer--content">
                 <h2>{title}</h2>
-                <div>
                 <span>{date}</span> |
                 <span>by {author}</span>
                 </div>

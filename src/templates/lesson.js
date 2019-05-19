@@ -24,6 +24,7 @@ export default function Lesson({data}) {
             </div>
             
             <div dangerouslySetInnerHTML={{ __html: lessonData.html}}/>
+            {lessonData.frontmatter.answers && lessonData.frontmatter.answers.map(answer => <h1>{answer}</h1>)}
             <Tags 
                 tags={lessonData.frontmatter.tags}
             />
@@ -45,6 +46,7 @@ query LessonByPath($path: String!) {
             title
             date
             tags
+            answers
             image {
                 childImageSharp {
                     resize(width: 1500, height: 1500) {

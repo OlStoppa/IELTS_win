@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, withPrefix } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Oliver from "../images/IMAG0030_1.jpg"
@@ -55,7 +54,7 @@ const SecondPage = () => (
       </div>
     </div>
     <div className="heading-container">
-      <Link><div className="button">Try The Correction Service</div></Link>
+      <Link to="/writing-test"><div className="button">Try The Correction Service</div></Link>
       <h4>How It Works</h4>
     </div>
     

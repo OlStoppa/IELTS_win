@@ -7,4 +7,8 @@
   &:hover {
     color: white;
   }
+
+  @media(max-width: $breakpoint) {
+    display: none;
+  }
 }

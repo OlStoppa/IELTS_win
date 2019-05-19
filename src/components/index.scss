@@ -5,6 +5,9 @@
 @import '../styles/components/recent-lessons';
 @import '../styles/components/header';
 @import '../styles/components/writing-corrections';
+@import '../styles/components/modal';
+@import '../styles/components/menuBtn';
+@import '../styles/components/mobileNav';
 
 html {
   font-family: Tahoma;
@@ -200,7 +203,7 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+ 
 }
 * {
   box-sizing: inherit;
@@ -631,9 +634,12 @@ pre tt:after {
 }
 
 .writing-link--outer {
-  height: 400px;
+  height: 300px;
   width: 100%;
   // overflow: hidden;
+  @media (max-width: $breakpoint) {
+    height: 150px;
+  }
   
 }
 
@@ -681,25 +687,32 @@ hr {
 
 .lesson-link__footer{
   height: 150px;
-  background-color: $dark-blue;
+  background-color: rgba(13, 43, 76, 0.8);
   transform: none;
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: 0.8;
+  
   color: white;
   padding: 2em;
  span {
    color: #aaa;
    font-weight: 0;
  }
+ @media(max-width: $breakpoint){
+   position: static;
+   height: auto;
+   
+   
+ }
 
 }
+
 header {
   height: 120px;
   transition-duration: 500ms;
   transition-property: height font-size;
-  z-index: 90;
+  z-index: 4;
 }
 .js-header {
   // display: block;
@@ -744,8 +757,16 @@ header {
 
 .share-block {
   display: flex;
-  width: 70%;
-  justify-content: space-evenly;
+  
+  position: fixed;
+  left:0;
+  top: 50vh;
+  flex-direction: column;
+  @media(max-width: $breakpoint) {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .footer {
@@ -753,6 +774,7 @@ header {
   height: 100px;
   position: absolute;
   width: 100%; 
+  
 }
 
 
@@ -762,6 +784,7 @@ header {
   background-color: #fff;
   max-width: 1200px;
   display: block;
+  padding-bottom: 75px;
 }
 
 aside {
@@ -770,6 +793,12 @@ aside {
   background-color: #fff;
   padding: 50px 10px;
   height: 100%;
+
+  @media(max-width: $breakpoint) {
+    width: 100%;
+    float: none;
+    height:auto;
+  }
  
 }
 
@@ -778,6 +807,10 @@ main {
   float: left;
   width: 70%;
   background-color: #FFF; 
+  @media(max-width: $breakpoint) {
+    width: 100%;
+    float: none;
+  }
 }
 
 .asideImg {

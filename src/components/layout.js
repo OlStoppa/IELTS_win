@@ -5,18 +5,26 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import gradeMy from "../images/IELTSspeaking-project.png"
 
 import Header from "./header"
-
+import Drawer from "./drawer"
 import Lessons from "../components/lessons"
 import "./index.scss"
 
-const Layout = ({ children }) => (
+const Layout = ({ children }) => {
+
+  let [drawerOpen, setDrawer] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawer(!drawerOpen);
+  }
+
+  return(
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -29,7 +37,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header 
+        siteTitle={data.site.siteMetadata.title} 
+        toggleDrawer={toggleDrawer}
+        isOpen={drawerOpen}
+        />
         <div className="div--skew" />
         <div
           style={{
@@ -40,14 +52,14 @@ const Layout = ({ children }) => (
             // backgroundColor: `white`,
             display: "flex",
             position: "relative",
-            paddingBottom: "75px",
+            // paddingBottom: "75px",
             flexGrow: 1
           }}
         >
           <div className="main--container">
             <main>{children}</main>
             <aside>
-              <div style={{}}>
+              <div>
                 <img className="asideImg" src={gradeMy} />
               </div>
               <hr />
@@ -56,6 +68,9 @@ const Layout = ({ children }) => (
           </div>
           
         </div>
+        <Drawer 
+          isOpen={drawerOpen}
+          />
         <Footer />
 
         
@@ -63,6 +78,7 @@ const Layout = ({ children }) => (
     )}
   />
 )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

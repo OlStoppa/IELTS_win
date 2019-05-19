@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "../components/header"
-
+import EmailModal from "../components/EmailModal"
 import Footer from "../components/footer"
 import writingQuestionImg1 from "../images/IELTS_Writing_Task_1_2.png"
 import writingQuestionImg2 from "../images/IELTS_Writing_Task_1_1.png"
@@ -129,11 +129,13 @@ class WritingTest extends React.Component {
     super(props)
     this.state = {
       question: 0,
-      type: "Academic",
+      type: 'Academic',
       uploaded: [],
       showQuestion: true,
-      task: "1",
-      answerText: ""
+      task: '1',
+      answerText: '',
+      modalIsOpen: false,
+      email: ''
     }
   }
   componentDidMount() {
@@ -213,12 +215,22 @@ class WritingTest extends React.Component {
         ],
         successUrl: "http://localhost:8000/success",
         cancelUrl: "http://localhost:8000/canceled",
+        customerEmail: this.state.email
       })
       .then(function(result) {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer
         // using `result.error.message`.
       })
+  }
+
+  handleChangeEmail = (e) => {
+    this.setState({ email: e.target.value})
+  }
+
+  handleModal = (e) => {
+    e.preventDefault()
+    this.setState(state => ({modalIsOpen: !state.modalIsOpen}))
   }
   render() {
     let questions =
@@ -279,9 +291,7 @@ class WritingTest extends React.Component {
               <textarea className="text-area__writing-test" value={this.state.answerText} onChange={this.handleChangeAnswerText}/>
               <div className="submit-container">
                 <form
-                  onSubmit={event => {
-                    this.handleCheckout(event)
-                  }}
+                  onSubmit={this.handleModal}
                 >
                   <button type="submit">Submit your Writing</button>
                 </form>
@@ -291,7 +301,13 @@ class WritingTest extends React.Component {
           </div>
           
         </div>
-        
+        <EmailModal
+        isOpen={this.state.modalIsOpen}
+        modalToggle={this.handleModal}
+        email={this.state.email}
+        checkout={this.handleCheckout}
+        changeEmail={this.handleChangeEmail}
+        />
         <Footer />
         
       </div>

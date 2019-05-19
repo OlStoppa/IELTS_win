@@ -13,21 +13,21 @@ import {
 const ShareBlock = (props) => (
     <div>
     <div className="share-block">
-    If you like this, please share:
+    
         <FacebookShareButton url={props.url}>
-            <FacebookIcon size={32} round={true}/>
+            <FacebookIcon size={50} />
         </FacebookShareButton>
         <TwitterShareButton url={props.url}>
-            <TwitterIcon size={32} round={true}/>
+            <TwitterIcon size={50}/>
         </TwitterShareButton>
         <TelegramShareButton url={props.url}>
-            <TelegramIcon size={32} round={true}/>
+            <TelegramIcon size={50} />
         </TelegramShareButton>
         <WhatsappShareButton url={props.url}>
-            <WhatsappIcon size={32} round={true}/>
+            <WhatsappIcon size={50} />
         </WhatsappShareButton>
     </div>
-    <hr/>
+    
     </div>
 )
 

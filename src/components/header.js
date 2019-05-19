@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Navbar from "../components/navbar"
 import SocialLinks from "../components/social"
+import MenuBtn from "./menuBtn"
 
 class Header extends React.Component {
   constructor(props){
@@ -62,6 +63,10 @@ return (
       </h1>
           <Navbar />
           <SocialLinks />
+          <MenuBtn 
+            toggleDrawer={this.props.toggleDrawer}
+            isOpen={this.props.isOpen}
+          />
     </div>
    
   </header>
