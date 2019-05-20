@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Navbar = (props) => (
-  <div className={props.mobile ? "navbar mobile" : "navbar"}>
+const Navbar = () => (
+  <div className= "navbar">
     <ul>
       <li>
         <div className="icon-box">

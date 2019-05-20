@@ -17,4 +17,27 @@
     
 }
 
- 
+.mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    ul {
+        list-style: none;
+        color: white;
+
+        li {
+            position: relative;
+            border: 2px solid white;
+        }
+    }
+}
+
+.mobile-nav__item--list {
+    // visibility: hidden;   
+    display: none;
+    &.expand {
+        display: block;
+    }
+}
+

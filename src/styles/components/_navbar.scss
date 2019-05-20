@@ -75,34 +75,7 @@
 
     @media(max-width: $breakpoint) {
         display: none;
-
-        &.mobile {
-            display: flex;
-            ul {
-                display: flex;
-                flex-direction: column;
-                position: static;
-
-            
-
-                li {
-                    display: inline-flex;
-                    flex-direction: column;
-                    position: inline-block;
-
-                    ul {
-                        display: inline-flex;
-
-                        a{
-                        position: static;
-                        display: inline-flex;
-                        }
-                    }
-                    
-                }
-            }
-        }
-
+               
     }
 }
 .icon-box {
