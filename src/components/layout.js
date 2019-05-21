@@ -56,7 +56,9 @@ const Layout = ({ children }) => {
             flexGrow: 1
           }}
         >
-          <div className="main--container">
+          <div className="main--container"
+           
+          >
             <main>{children}</main>
             <aside>
               <div>
@@ -65,13 +67,18 @@ const Layout = ({ children }) => {
               <hr />
               <Lessons />
             </aside>
+            </div>
+        
           </div>
           
-        </div>
+        
         <Drawer 
           isOpen={drawerOpen}
           />
         <Footer />
+        {drawerOpen && 
+        <div className="overlay" onClick={toggleDrawer}/>
+        }
 
         
       </>

@@ -1,43 +1,84 @@
 .drawer {
-    height: 100vh;
-    width: 80vw;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: $primary;
-    z-index: 5;
-    // display: none;
-    transform: translate3d(-100vw, 0, 0);
-    transition: transform 1000ms;
-    
-    &.open {
-        transform: translate3d(0vw, 0, 0);
-    }
+  height: 100vh;
+  width: 80vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $primary;
+  z-index: 5;
+  // display: none;
+  transform: translate3d(-100vw, 0, 0);
+  transition: transform 1000ms;
 
-    
+  &.open {
+    transform: translate3d(0vw, 0, 0);
+  }
 }
 
 .mobile-nav-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
 
-    ul {
-        list-style: none;
-        color: white;
+  ul {
+    list-style: none;
+    color: white;
 
-        li {
-            position: relative;
-            border: 2px solid white;
+    li {
+      position: relative;
+      border-bottom: 1px solid grey;
+      margin: 0;
+      padding: 0.6rem;
+
+      .material-icons {
+        transition: transform 1s ease;
+        &.rotated {
+          transform: rotate(765deg);
         }
+      }
     }
+  }
 }
 
 .mobile-nav__item--list {
-    // visibility: hidden;   
-    display: none;
-    &.expand {
-        display: block;
+  // visibility: hidden;
+  display: none;
+  &.expand {
+    display: block;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      li {
+        background: grey;
+      }
     }
+  }
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  height: 100%;
+  width: 100%;
+  background: rgba(black, 0.8);
+  z-index: 3;
+}
+
+.mobile-nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
