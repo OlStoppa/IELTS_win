@@ -10,6 +10,11 @@
   transform: translate3d(-100vw, 0, 0);
   transition: transform 1000ms;
 
+  .social-icon {
+    display: inline-block;
+    text-align: center;
+  }
+
   &.open {
     transform: translate3d(0vw, 0, 0);
   }
@@ -81,4 +86,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.mobile-nav__header {
+  padding: 20px;
+  color: white;
+
+  h3 {
+    font-size: 2.4rem;
+  }
 }

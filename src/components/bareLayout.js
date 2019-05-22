@@ -9,14 +9,11 @@ import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
-import gradeMy from "../images/IELTSspeaking-project.png"
-
 import Header from "./header"
 import Drawer from "./drawer"
-import Lessons from "../components/lessons"
 import "./index.scss"
 
-const Layout = ({ children }) => {
+const BareLayout = ({ children }) => {
 
   let [drawerOpen, setDrawer] = useState(false);
 
@@ -27,7 +24,7 @@ const Layout = ({ children }) => {
   return(
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query TitleQuery {
         site {
           siteMetadata {
             title
@@ -51,23 +48,20 @@ const Layout = ({ children }) => {
             paddingTop: 0,
             // backgroundColor: `white`,
             display: "flex",
-            // position: "relative",
-            // paddingBottom: "75px",
+            position: "relative",
+            height: "100%",
+            flexDirection: "column",
+            alignItems: "stretch",
             flexGrow: 1,
             width: "100%"
+            // paddingBottom: "75px",
+            
           }}
         >
           <div className="main--container"
            
           >
-            <main>{children}</main>
-            <aside>
-              <div>
-                <img className="asideImg" src={gradeMy} />
-              </div>
-              <hr />
-              <Lessons />
-            </aside>
+            <div className="bare-layout__content">{children}</div>
             </div>
         
           </div>
@@ -88,8 +82,8 @@ const Layout = ({ children }) => {
 )
 }
 
-Layout.propTypes = {
+BareLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default BareLayout

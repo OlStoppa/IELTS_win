@@ -4,6 +4,7 @@ import EmailModal from "../components/EmailModal"
 import Footer from "../components/footer"
 import writingQuestionImg1 from "../images/IELTS_Writing_Task_1_2.png"
 import writingQuestionImg2 from "../images/IELTS_Writing_Task_1_1.png"
+import Drawer from "../components/drawer"
 
 const generalQuestions = [
   [
@@ -135,7 +136,8 @@ class WritingTest extends React.Component {
       task: '1',
       answerText: '',
       modalIsOpen: false,
-      email: ''
+      email: '',
+      drawerOpen: false
     }
   }
   componentDidMount() {
@@ -232,13 +234,24 @@ class WritingTest extends React.Component {
     e.preventDefault()
     this.setState(state => ({modalIsOpen: !state.modalIsOpen}))
   }
+
+  toggleDrawer = () => {
+    this.setState(state => ({
+      drawerOpen: !state.drawerOpen
+    }))
+  }
+  
   render() {
     let questions =
       this.state.type === "Academic" ? academicQuestions : generalQuestions
     let task = this.state.task === "1" ? 0 : 1
     return (
       <div>
-        <Header siteTitle="IELTS WIN" />
+        <Header 
+        siteTitle="IELTS XL"
+        toggleDrawer={this.toggleDrawer}
+        isOpen={this.state.drawerOpen} 
+        />
        
         <div className="writing-page--body">
         <div className="div--skew__writing-test"></div>
@@ -253,9 +266,6 @@ class WritingTest extends React.Component {
                 <option value="2">Task 2</option>
               </select>
               <button onClick={this.handleQuestionChange}>New Question</button>
-              <button onClick={this.handleHideQuestion}>
-                {this.state.showQuestion ? "Hide Question" : "Show Question"}
-              </button>
               <form className="inputForm">
                 <input
                   disabled={this.state.uploaded.length > 1}
@@ -269,7 +279,9 @@ class WritingTest extends React.Component {
                 />
                 <label for="file">Upload File</label>
               </form>
+              
             </div>
+            <div className={this.state.showQuestion ? "hideQuestion" : "hideQuestion hidden"}><span onClick={this.handleHideQuestion} className="material-icons">arrow_drop_up</span></div>
             {this.state.uploaded.length > 0 && (
               <div className="test-question">
                 {this.state.uploaded.map(name => {
@@ -309,6 +321,12 @@ class WritingTest extends React.Component {
         changeEmail={this.handleChangeEmail}
         />
         <Footer />
+        <Drawer
+          isOpen={this.state.drawerOpen}
+         />
+         {this.state.drawerOpen && 
+        <div className="overlay" onClick={this.toggleDrawer}/>
+        }
         
       </div>
     )

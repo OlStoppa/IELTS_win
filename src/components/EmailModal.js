@@ -9,7 +9,7 @@ const EmailModal = (props) => (
         closeTimeoutMS={200}
         className="modal"
         >
-        <h1>IELTS WIN</h1>
+        <h1>IELTS XL</h1>
         <p>You will receive a pdf file with your corrected essay, band score and feedback within 48 hours.</p>
         <p>Give a valid Email and proceed to checkout.</p>
         <form onSubmit={props.checkout}>

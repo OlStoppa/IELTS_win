@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import CollapseNav from "./collapseNav"
 import { Link } from "gatsby"
+import Social from "./social"
 
 const Drawer = props => {
-  const initial = [true, false]
+  const initial = [false, false]
   const [[...expandArr], setExpand] = useState(initial)
 
   const expandItem = clicked => {
@@ -16,7 +17,10 @@ const Drawer = props => {
 
   return (
     <div className={props.isOpen ? "drawer open" : "drawer"}>
-      <h3>IELTS WIN</h3>
+      <div className="mobile-nav__header">
+      <h3>IELTS XL</h3>
+      </div>
+      <Social />
       <div className="mobile-nav-container">
         <ul>
           <CollapseNav
