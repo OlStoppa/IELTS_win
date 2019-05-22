@@ -246,7 +246,7 @@ class WritingTest extends React.Component {
       this.state.type === "Academic" ? academicQuestions : generalQuestions
     let task = this.state.task === "1" ? 0 : 1
     return (
-      <div>
+      <div className="layout-container">
         <Header 
         siteTitle="IELTS XL"
         toggleDrawer={this.toggleDrawer}

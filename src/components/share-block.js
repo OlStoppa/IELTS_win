@@ -11,7 +11,7 @@ import {
 } from "react-share"
 
 const ShareBlock = (props) => (
-    <div>
+    
     <div className="share-block">
     
         <FacebookShareButton url={props.url}>
@@ -28,7 +28,7 @@ const ShareBlock = (props) => (
         </WhatsappShareButton>
     </div>
     
-    </div>
+    
 )
 
 export default ShareBlock

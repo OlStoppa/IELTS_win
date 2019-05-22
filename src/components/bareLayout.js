@@ -58,7 +58,7 @@ const BareLayout = ({ children }) => {
             
           }}
         >
-          <div className="main--container"
+          <div className="main--container bare"
            
           >
             <div className="bare-layout__content">{children}</div>

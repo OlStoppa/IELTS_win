@@ -65,6 +65,7 @@ const Drawer = props => {
               </Link>
             </ul>
           </CollapseNav>
+          <Link to="/contact"><li>Contact Us</li></Link>
         </ul>
       </div>
     </div>

@@ -11,6 +11,12 @@
 
 .ReactModalPortal .ReactModal__Overlay--after-open {
     opacity: 1;
+    input {
+        background-color: #eee;
+	        border: none;
+	        padding: 12px 15px;
+	        margin: 8px 0;
+    }
 }
 
 .ReactModalPortal .ReactModal__Overlay--before-close {

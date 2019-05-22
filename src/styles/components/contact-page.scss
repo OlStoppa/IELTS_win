@@ -1,0 +1,90 @@
+.contact-page {
+    background: rgba(aliceblue, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    @media (max-width: $breakpoint) {
+        height: 1000px
+    }
+
+}
+
+.contact-page__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: aliceblue;
+    color: rgb(39, 39, 39);
+
+    @media (max-width: $breakpoint) {
+        flex: 0.5;
+    }
+
+
+}
+
+.contact-page__body {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+
+    @media (max-width: $breakpoint) {
+        flex-direction: column;
+    }
+}
+
+.contact-page__image--container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    color: white;
+    flex-direction: column;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    h4{
+        width: 50%;
+    }
+    
+}
+
+.contact-page__form--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: transparent;
+    form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90%;
+    padding: 20px;
+    width: 60%;
+    background: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+        input, textarea {
+            background-color: #eee;
+	        border: none;
+	        padding: 12px 15px;
+	        margin: 8px 0;
+	        width: 100%;
+        }
+
+        textarea {
+            height: 50%;
+        }
+
+        button: {
+            width: 50%;
+
+        }
+
+        @media(max-width: $breakpoint) {
+            width: 90%
+        }
+
+    }
+}

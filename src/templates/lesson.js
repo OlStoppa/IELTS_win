@@ -12,6 +12,9 @@ export default function Lesson({data}) {
     
     return (
         <Layout>
+        <ShareBlock 
+                url={`www.ieltswin.com/${lessonData.frontmatter.path}`}
+                />
         <div>
             
             <div className="lesson-link">
@@ -28,9 +31,7 @@ export default function Lesson({data}) {
             <Tags 
                 tags={lessonData.frontmatter.tags}
             />
-            <ShareBlock 
-                url={`www.ieltswin.com/${lessonData.frontmatter.path}`}
-                />
+            
         </div>
         </Layout>
     );
