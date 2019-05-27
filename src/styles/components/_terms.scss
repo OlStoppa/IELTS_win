@@ -1,0 +1,29 @@
+.terms-page {
+
+}
+
+.terms-page__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: aliceblue;
+    color: rgb(39, 39, 39);
+
+    @media (max-width: $breakpoint) {
+        
+    }
+
+}
+
+.terms-page__body {
+
+    padding: 30px;
+    background: white;
+    font-size: 0.7rem;
+
+    h4 {
+        color: $primary;
+    }
+
+}

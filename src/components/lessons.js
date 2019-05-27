@@ -17,7 +17,7 @@ const Lessons = () => (
                    date
                    image {
                     childImageSharp {
-                        resize(width: 1500, height: 1500) {
+                        resize(width: 500, height: 300) {
                           src
                         }
                         fluid(maxWidth: 100) {

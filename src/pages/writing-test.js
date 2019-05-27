@@ -1,10 +1,12 @@
 import React from "react"
+import { FirebaseContext } from '../firebase';
 import Header from "../components/header"
 import EmailModal from "../components/EmailModal"
 import Footer from "../components/footer"
 import writingQuestionImg1 from "../images/IELTS_Writing_Task_1_2.png"
 import writingQuestionImg2 from "../images/IELTS_Writing_Task_1_1.png"
 import Drawer from "../components/drawer"
+import Shareblock from "../components/share-block"
 
 const generalQuestions = [
   [
@@ -126,6 +128,9 @@ const academicQuestions = [
 ]
 
 class WritingTest extends React.Component {
+  static contextType = FirebaseContext;
+
+
   constructor(props) {
     super(props)
     this.state = {
@@ -142,6 +147,8 @@ class WritingTest extends React.Component {
   }
   componentDidMount() {
     this.stripe = window.Stripe("pk_test_8fETfQs8sqEWTlJsyKWnzKH4")
+    
+    
   }
   handleTestType = e => {
     this.setState({ type: e.target.value, question: 0 })
@@ -168,7 +175,9 @@ class WritingTest extends React.Component {
 
   handlePickFiles = e => {
     let file = e.target.files
-
+    if (file[0].size > 2097152){
+     return alert("This file is too large. Please upload a smaller file")
+    }
     if(file.length > 0) {
     let reader = new FileReader()
     reader.readAsDataURL(file[0])
@@ -209,6 +218,22 @@ class WritingTest extends React.Component {
 
   handleCheckout = event => {
     event.preventDefault()
+    const { database, storage} = this.context
+    if(this.state.uploaded.length > 0) {
+      this.state.uploaded.map((file, index) => {
+        const storageRef = storage.ref()
+        const uploadRef = storageRef.child(file.fileName)
+        uploadRef.putString(file.fileData, 'data_url')
+      })
+    
+    
+    }
+   
+    const data = {
+      email: this.state.email,
+      answerText: this.state.answerText,
+    }
+    database.ref().set(data);
     this.stripe
       .redirectToCheckout({
         items: [
@@ -235,12 +260,13 @@ class WritingTest extends React.Component {
     this.setState(state => ({modalIsOpen: !state.modalIsOpen}))
   }
 
+
   toggleDrawer = () => {
     this.setState(state => ({
       drawerOpen: !state.drawerOpen
     }))
   }
-  
+   
   render() {
     let questions =
       this.state.type === "Academic" ? academicQuestions : generalQuestions
@@ -252,8 +278,8 @@ class WritingTest extends React.Component {
         toggleDrawer={this.toggleDrawer}
         isOpen={this.state.drawerOpen} 
         />
-       
         <div className="writing-page--body">
+        <Shareblock />
         <div className="div--skew__writing-test"></div>
           <div className="test-container">
             <div className="test-nav">

@@ -9,6 +9,8 @@
 @import '../styles/components/menuBtn';
 @import '../styles/components/mobileNav';
 @import '../styles/components/contact-page';
+@import '../styles/components/footer';
+@import '../styles/components/terms';
 
 html {
   font-family: Tahoma;
@@ -774,7 +776,7 @@ header {
   .social-icon {
     display: inline-block;
   }
-  @media(max-width: 1024px) {
+  @media(max-width: 1300px) {
     position: sticky;
     top:50px;
     float: left;
@@ -788,14 +790,7 @@ header {
   }
 }
 
-.footer {
-  background-color: #0d2b4c;
-  height: 100px;
-  // position: absolute;
-  width: 100%; 
- 
-  
-}
+
 
 
 .main--container {
