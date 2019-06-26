@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import SEO from '../components/seo';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import Tags from '../components/tags';
@@ -9,27 +10,28 @@ import ShareBlock from '../components/share-block'
 export default function Lesson({data}) {
     const lessonData = data.markdownRemark;
 
-    
+    const {title, image, author, date, tags, path} = lessonData.frontmatter
     return (
         <Layout>
+        <SEO title image keywords={tags}/>
         <ShareBlock 
-                url={`www.ieltswin.com/${lessonData.frontmatter.path}`}
+                url={`www.ieltswin.com/${path}`}
                 />
         <div>
             
             <div className="lesson-link">
-            <Img fluid={lessonData.frontmatter.image.childImageSharp.fluid} />
+            <Img fluid={image.childImageSharp.fluid} />
             <div className="lesson-link__footer">
-            <h2>{lessonData.frontmatter.title}</h2>
-            <span>By {lessonData.frontmatter.author}</span>
-            <span> on {lessonData.frontmatter.date}</span>
+            <h2>{title}</h2>
+            <span>By {author}</span>
+            <span> on {date}</span>
             </div>
             </div>
             
             <div dangerouslySetInnerHTML={{ __html: lessonData.html}}/>
             {lessonData.frontmatter.answers && lessonData.frontmatter.answers.map(answer => <h1>{answer}</h1>)}
             <Tags 
-                tags={lessonData.frontmatter.tags}
+                tags={tags}
             />
             
         </div>

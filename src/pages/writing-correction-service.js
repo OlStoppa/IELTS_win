@@ -7,9 +7,9 @@ import Oliver from "../images/IMAG0030_1.jpg"
 import preview from "../images/preview.jpg"
 
 
-const SecondPage = () => (
+const WritingCorrectionService = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Writing Correction Service" description={`Information on our IELTS writing correction service`} keywords={[`IELTS writing`, `correction` ]}/>
     <h3>About The IELTS XL writing correction band score and feedback service.</h3>
     <h4>This service is managed and reviewed by Oliver Lennon</h4>
     <div className="oliver-container">
@@ -79,4 +79,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default WritingCorrectionService

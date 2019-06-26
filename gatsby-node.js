@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 
+
 const path = require('path');
 const _ = require('lodash')
 const { createFilePath } = require(`gatsby-source-filesystem`)

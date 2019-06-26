@@ -1,8 +1,12 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `IELTS XL`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Recources and services to help you get a great IELTS band score`,
+    author: `Oliver`,
   },
   plugins: [
     `gatsby-plugin-stripe`,
@@ -81,6 +85,13 @@ module.exports = {
       ],
     },
   },
+  {
+    resolve: `gatsby-plugin-env-variables`,
+    options: {
+      whitelist: ["GATSBY_FIREBASE_API_KEY", "GATSBY_FIREBASE_AUTH_DOMAIN", "GATSBY_FIREBASE_DATABASE_URL", "GATSBY_FIREBASE_PROJECT_ID", "GATSBY_FIREBASE_STORAGE_BUCKET", "GATSBY_FIREBASE_MESSAGING_SENDER_ID"]
+    },
+  },
+ 
     
 
   

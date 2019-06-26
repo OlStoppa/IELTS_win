@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="IELTS XL" keywords={[`IELTS`, `lessons`, `correction`]} />
     <Link to="/writing-test">
     <div className="writing-link--outer">
     <div className="writing-link">
