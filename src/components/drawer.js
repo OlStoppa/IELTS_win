@@ -30,40 +30,34 @@ const Drawer = props => {
             index={0}
           >
             <ul>
-              <Link>
-                <li>Writing Correction</li>
+              <Link to="/writing-correction-service">
+                <li>Writing Correction Service</li>
               </Link>
-              <Link>
-                <li>Writing Tips</li>
+              <Link to="/writing-test">
+                <li>Practice Tests</li>
               </Link>
-              <Link>
-                <li>Task 1</li>
-              </Link>
-              <Link>
-                <li>Task 2</li>
-              </Link>
+              
             </ul>
           </CollapseNav>
           <CollapseNav
-            item={"Writing"}
+            item={"Speaking"}
             expand={expandArr[1]}
             expandItem={expandItem}
             index={1}
           >
             <ul>
-              <Link>
-                <li>Writing Correction</li>
-              </Link>
-              <Link>
-                <li>Writing Tips</li>
-              </Link>
-              <Link>
-                <li>Task 1</li>
-              </Link>
-              <Link>
-                <li>Task 2</li>
-              </Link>
-            </ul>
+        <Link to="/a-cool-ielts-speaking-part-1-strategy">
+            <li>Part 1</li>
+          </Link>
+        <Link to="/tags/part-2">
+            <li>Part 2</li>
+          </Link>
+          <Link to="/tags/speaking">
+            <li>Tips</li>
+          </Link>
+          
+          
+        </ul>
           </CollapseNav>
           <Link to="/contact"><li>Contact Us</li></Link>
         </ul>

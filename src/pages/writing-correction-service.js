@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, withPrefix } from "gatsby"
+import Image from "../components/image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Oliver from "../images/IMAG0030_1.jpg"
@@ -9,7 +10,7 @@ import preview from "../images/preview.jpg"
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <h3>About The IELTS WIN writing correction band score and feedback service.</h3>
+    <h3>About The IELTS XL writing correction band score and feedback service.</h3>
     <h4>This service is managed and reviewed by Oliver Lennon</h4>
     <div className="oliver-container">
       <div className="oliver-image">
@@ -22,13 +23,13 @@ const SecondPage = () => (
       
     </div>
     <div className="heading-container">
-    <h4>What you get</h4>
+    <h4>What You Get</h4>
     </div>
     <div className="preview-container">
       <div className="pdf-preview--container">
         <a 
         target="_blank"
-        rel="noopener norefferer"
+        rel="noopener noreferrer"
         href={withPrefix(`/samplecorrectmedical1.pdf`)}
         
         >
@@ -57,6 +58,23 @@ const SecondPage = () => (
       <Link to="/writing-test"><div className="button">Try The Correction Service</div></Link>
       <h4>How It Works</h4>
     </div>
+    <div className="container__writing-guide">
+        <div className="writing-guide__image">
+          <Image 
+          filename="writing-app.PNG"
+        /></div>
+        <div className="writing-guide__data">
+          <ul>
+            <li>Just head over to the writing test section of this site.</li>
+            <li>Select a question you want to try, or answer a question you have found somewhere else.</li>
+            <li>Type your answer or upload a file.</li>
+            <li>Submit your answer and within 48 hours you will receive detailed feedback, corrections and your IELTS band score by email.</li>
+            <li><strong>1 correction = £15</strong></li>
+            <Link to="/writing-test"><div className="button">Try It Now</div></Link>
+            <Link to ="/writing-correction-service" ><div className="button">Find Out More</div></Link>
+          </ul>
+        </div>
+      </div>
     
   </Layout>
 )

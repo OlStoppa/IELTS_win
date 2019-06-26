@@ -12,39 +12,39 @@ const generalQuestions = [
   [
     [
       <p>
-        A local magazine editor has asked for readers opinion. Write a letter to
-        magazine editor.
+        A friend has agreed to look after your house and pet while you are on holiday. Write a letter to your friend.
       </p>,
-      <p>In the letter, you should tell:</p>,
+      <p>In the letter</p>,
       <ul>
-        <li>what made you choose this magazine</li>
-        <li>why you like and dislike about it</li>
-        <li>what improvements you want to see</li>
+        <li>give contact details for when you are away</li>
+        <li>give instructions about how to care for your pet</li>
+        <li>describe other household duties</li>
       </ul>,
+      <p>Write at least 150 words. You do NOT need to write any addresses.</p>
     ],
     [
       <p>
-        A local magazine editor has asked for readers opinion. Write a letter to
-        magazine editor.
+        A friend has written to you asking for advice about a problem at work. You have had a similar problem in the past. Write a reply to your friend.
       </p>,
-      <p>In the letter, you should tell:</p>,
+      <p>In the letter:</p>,
       <ul>
-        <li>what made you choose this magazine</li>
-        <li>why you like and dislike about it</li>
-        <li>what improvements you want to see</li>
+        <li>tell your friend you understand the problem</li>
+        <li>explain what happened to you in the past</li>
+        <li>suggest possible solutions to the problem</li>
       </ul>,
+      <p>Write at least 150 words. You do NOT need to write any addresses.</p>
     ],
     [
       <p>
-        A local magazine editor has asked for readers opinion. Write a letter to
-        magazine editor.
+        You have organized to go on holiday with a friend. However, you must change your plans. Write your friend  letter.
       </p>,
-      <p>In the letter, you should tell:</p>,
+      <p>In the letter:</p>,
       <ul>
-        <li>what made you choose this magazine</li>
-        <li>why you like and dislike about it</li>
-        <li>what improvements you want to see</li>
+        <li>tell them how much you are looking forward to the holiday</li>
+        <li>explain why you must change your plans</li>
+        <li>suggest alternative arrangements</li>
       </ul>,
+      <p>Write at least 150 words. You do NOT need to write any addresses.</p>
     ],
   ],
   [
@@ -220,9 +220,9 @@ class WritingTest extends React.Component {
     event.preventDefault()
     const { database, storage} = this.context
     if(this.state.uploaded.length > 0) {
-      this.state.uploaded.map((file, index) => {
+      this.state.uploaded.map((file) => {
         const storageRef = storage.ref()
-        const uploadRef = storageRef.child(file.fileName)
+        const uploadRef = storageRef.child(`${this.state.email}/${file.fileName}`)
         uploadRef.putString(file.fileData, 'data_url')
       })
     

@@ -42,6 +42,7 @@ const Lessons = () => (
 
         {data.allMarkdownRemark.edges.map(post => (
           <Link
+            key={post.node.id}
             to={post.node.frontmatter.path}
             style={{ textDecoration: "none"}}
           >

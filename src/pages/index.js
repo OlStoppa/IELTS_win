@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Image from '../components/image'
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
@@ -26,11 +26,30 @@ const IndexPage = () => (
     <h3>Try our writing practice tests</h3>
     <ul>
       <li>You can submit your test for grading by one of our experienced IELTS tutors.</li>
-      <li><Link to="/writing-test">Check out an example of the kind of feedback and correction we offer.</Link></li>
+      <li><Link to="/writing-correction-service">Check out an example of the kind of feedback and correction we offer.</Link></li>
 
     </ul>
+    <div>
+      <h3>How It Works</h3>
+      <div className="container__writing-guide">
+        <div className="writing-guide__image">
+          <Image 
+          filename="writing-app.PNG"
+        /></div>
+        <div className="writing-guide__data">
+          <ul>
+            <li>Just head over to the writing test section of this site.</li>
+            <li>Select a question you want to try, or answer a question you have found somewhere else.</li>
+            <li>Type your answer or upload a file.</li>
+            <li>Submit your answer and within 48 hours you will receive detailed feedback, corrections and your IELTS band score by email.</li>
+            <Link to="/writing-test"><div className="button">Try It Now</div></Link>
+            <Link to ="/writing-correction-service" ><div className="button">Find Out More</div></Link>
+          </ul>
+        </div>
+      </div>
+    </div>
     
-    <Link to="/page-2/">Go to page 2</Link>
+    
   </Layout>
 )
 

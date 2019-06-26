@@ -10,18 +10,13 @@ const Navbar = () => (
           <span className="material-icons">arrow_drop_down</span>
         </div>
         <ul>
-          <Link>
-            <li>Writing Correction</li>
+          <Link to="/writing-correction-service">
+            <li>Writing Correction Service</li>
           </Link>
-          <Link>
-            <li>Task 1</li>
+          <Link to="/writing-test">
+            <li>Practice Tests</li>
           </Link>
-          <Link>
-            <li>Task 2</li>
-          </Link>
-          <Link>
-            <li>Happy Days</li>
-          </Link>
+          
         </ul>
       </li>
       <li>
@@ -29,18 +24,7 @@ const Navbar = () => (
           READING<span className="material-icons">arrow_drop_down</span>
         </div>
         <ul>
-        <Link>
-            <li>Writing Correction</li>
-          </Link>
-          <Link>
-            <li>Task 1</li>
-          </Link>
-          <Link>
-            <li>Task 2</li>
-          </Link>
-          <Link>
-            <li>Happy Days</li>
-          </Link>
+        <li>Reading Lessons Coming! </li>
         </ul>
       </li>
       <li>
@@ -48,18 +32,7 @@ const Navbar = () => (
           LISTENING<span className="material-icons">arrow_drop_down</span>
         </div>
         <ul>
-        <Link>
-            <li>Writing Correction</li>
-          </Link>
-          <Link>
-            <li>Task 1</li>
-          </Link>
-          <Link>
-            <li>Task 2</li>
-          </Link>
-          <Link>
-            <li>Happy Days</li>
-          </Link>
+        <li>Listening Lessons Coming!</li>
         </ul>
       </li>
       <li>
@@ -67,18 +40,17 @@ const Navbar = () => (
           SPEAKING<span className="material-icons">arrow_drop_down</span>
         </div>
         <ul>
-        <Link>
-            <li>Writing Correction</li>
+        <Link to="/a-cool-ielts-speaking-part-1-strategy">
+            <li>Part 1</li>
           </Link>
-          <Link>
-            <li>Task 1</li>
+        <Link to="/tags/part-2">
+            <li>Part 2</li>
           </Link>
-          <Link>
-            <li>Task 2</li>
+          <Link to="/tags/speaking">
+            <li>Tips</li>
           </Link>
-          <Link>
-            <li>Happy Days</li>
-          </Link>
+          
+          
         </ul>
       </li>
     </ul>

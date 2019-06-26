@@ -5,7 +5,7 @@ title: "Planning Your IELTS Speaking Part 2 Answer"
 author: "Oliver"
 category: "speaking"
 tags: ["speaking", "part-2", "strategy"]
-image: mindmapping.jpg
+image: mindmapping.png
 ---
 
 You will be allowed **60 seconds** to plan your extended answer. Test takers find that

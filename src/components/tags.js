@@ -6,7 +6,7 @@ const Tags = (props) => (
     <hr/>
     <div className="tag--container">
         
-       {props.tags.map((tag) => <Link to={`/tags/${tag}/`}><div className="tag">{tag}</div></Link>)}
+       {props.tags.map((tag) => <Link key={tag} to={`/tags/${tag}/`}><div className="tag">{tag}</div></Link>)}
         
         
     </div>

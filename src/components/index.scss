@@ -836,6 +836,9 @@ main {
     width: 100%;
     float: none;
   }
+  ul {
+    list-style: none;
+  }
 }
 
 .asideImg {
@@ -866,3 +869,32 @@ main {
   flex-direction: column;
 }
 
+.container__writing-guide {
+  // height: 400px;
+  display: flex;
+
+  div {
+    padding: 20px;
+  }
+
+  @media(max-width: $breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.writing-guide__image {
+  flex: 1;
+  img {
+    object-fit: cover;
+  }
+}
+
+.writing-guide__data {
+  flex: 1;
+
+  ul {
+    div {
+      width: 100%;
+    }
+  }
+}
