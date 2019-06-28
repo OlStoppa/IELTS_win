@@ -4,7 +4,7 @@ import Image from "../components/image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Oliver from "../images/IMAG0030_1.jpg"
-import preview from "../images/preview.JPG"
+import preview from "../images/preview.jpg"
 
 
 const WritingCorrectionService = () => (
