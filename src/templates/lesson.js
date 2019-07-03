@@ -13,9 +13,9 @@ export default function Lesson({data}) {
     const {title, image, author, date, tags, path} = lessonData.frontmatter
     return (
         <Layout>
-        <SEO title image keywords={tags}/>
+        <SEO title={title} image={image.childImageSharp.fluid.src} keywords={tags}/>
         <ShareBlock 
-                url={`www.ieltswin.com/${path}`}
+                url={`https://www.ieltswin.com/${path}`}
                 />
         <div>
             
