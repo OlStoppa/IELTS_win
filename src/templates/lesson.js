@@ -15,7 +15,7 @@ export default function Lesson({data}) {
         <Layout>
         <SEO title={title} image={image.childImageSharp.fluid.src} keywords={tags}/>
         <ShareBlock 
-                url={`https://www.ieltswin.com/${path}`}
+                url={`https://www.ieltsxl.com${path}`}
                 />
         <div>
             

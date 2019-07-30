@@ -146,7 +146,7 @@ class WritingTest extends React.Component {
     }
   }
   componentDidMount() {
-    this.stripe = window.Stripe("pk_test_8fETfQs8sqEWTlJsyKWnzKH4")
+    this.stripe = window.Stripe("pk_live_mkvj0gmw83yJmjL6NKaSYvWj")
     
     
   }
@@ -238,7 +238,7 @@ class WritingTest extends React.Component {
       .redirectToCheckout({
         items: [
           // Replace with the ID of your SKU
-          { sku: "sku_Ev6rjY3JNs3MgT", quantity: 1 },
+          { sku: "sku_Ev6YjEwpjwViXe", quantity: 1 },
         ],
         successUrl: "http://localhost:8000/success",
         cancelUrl: "http://localhost:8000/canceled",
@@ -248,6 +248,7 @@ class WritingTest extends React.Component {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer
         // using `result.error.message`.
+        alert(result.error.message)
       })
   }
 
