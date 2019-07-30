@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({title, description, image,meta, lang, keywords }) {
-console.log(title, keywords )
+
   const { site } = useStaticQuery(
     graphql`
       query {

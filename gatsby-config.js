@@ -91,7 +91,13 @@ module.exports = {
       whitelist: ["GATSBY_FIREBASE_API_KEY", "GATSBY_FIREBASE_AUTH_DOMAIN", "GATSBY_FIREBASE_DATABASE_URL", "GATSBY_FIREBASE_PROJECT_ID", "GATSBY_FIREBASE_STORAGE_BUCKET", "GATSBY_FIREBASE_MESSAGING_SENDER_ID"]
     },
   },
- 
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+      trackingId: "UA-144845005-1",
+    },
+  },
     
 
   
