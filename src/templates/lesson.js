@@ -4,7 +4,8 @@ import SEO from '../components/seo';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import Tags from '../components/tags';
-import ShareBlock from '../components/share-block'
+import ShareBlock from '../components/share-block';
+import RelatedArticles from '../components/relatedArticles';
 
 
 export default function Lesson({data}) {
@@ -33,7 +34,10 @@ export default function Lesson({data}) {
             <Tags 
                 tags={tags}
             />
-            
+            <RelatedArticles 
+                tags={tags}
+                currentArticlePath={path}
+            />
         </div>
         </Layout>
     );

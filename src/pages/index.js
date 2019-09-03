@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="IELTS XL" keywords={[`IELTS`, `lessons`, `correction`]} />
+    <SEO title="Home" keywords={[`IELTS`, `lessons`, `correction`]} />
     <Link to="/writing-test">
     <div className="writing-link--outer">
     <div className="writing-link">
@@ -38,12 +38,13 @@ const IndexPage = () => (
         /></div>
         <div className="writing-guide__data">
           <ul>
+          <Link to ="/writing-correction-service" ><div className="button">Find Out More</div></Link>
             <li>Just head over to the writing test section of this site.</li>
             <li>Select a question you want to try, or answer a question you have found somewhere else.</li>
             <li>Type your answer or upload a file.</li>
             <li>Submit your answer and within 48 hours you will receive detailed feedback, corrections and your IELTS band score by email.</li>
             <Link to="/writing-test"><div className="button">Try It Now</div></Link>
-            <Link to ="/writing-correction-service" ><div className="button">Find Out More</div></Link>
+            
           </ul>
         </div>
       </div>

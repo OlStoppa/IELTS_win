@@ -69,9 +69,9 @@ const WritingCorrectionService = () => (
             <li>Select a question you want to try, or answer a question you have found somewhere else.</li>
             <li>Type your answer or upload a file.</li>
             <li>Submit your answer and within 48 hours you will receive detailed feedback, corrections and your IELTS band score by email.</li>
-            <li><strong>1 correction = £15</strong></li>
+            <li><strong>1 correction = £9.99</strong></li>
             <Link to="/writing-test"><div className="button">Try It Now</div></Link>
-            <Link to ="/writing-correction-service" ><div className="button">Find Out More</div></Link>
+            
           </ul>
         </div>
       </div>

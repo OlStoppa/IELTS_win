@@ -13,7 +13,9 @@ import {
 const ShareBlock = (props) => (
     
     <div className="share-block">
-    
+        <div className="share-block__first-block">
+            <p>share</p>
+        </div>
         <FacebookShareButton url={props.url}>
             <FacebookIcon size={50} />
         </FacebookShareButton>

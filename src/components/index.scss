@@ -11,6 +11,8 @@
 @import '../styles/components/contact-page';
 @import '../styles/components/footer';
 @import '../styles/components/terms';
+@import '../styles/components/lessonCard';
+@import '../styles/components/realatedArticles';
 
 html {
   font-family: Tahoma;
@@ -736,7 +738,7 @@ header {
   position: absolute;
   height: 85vh;
   width: 100%;
-  background: #3d5d81;
+  // background: #3d5d81;
   transform: skew(0deg, -10deg) translateY(-120px);
   z-index: -1;
   
@@ -787,6 +789,21 @@ header {
 
     
     
+  }
+}
+
+.share-block__first-block {
+  width: 50px;
+  height: 50px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+  p {
+    margin-bottom: 0;
+
   }
 }
 
